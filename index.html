@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <!-- Page made by Rodrigo Moreno Bielsa 2ºDAW -->
+
+    <head>
+        <!-- Page title-->
+        <title>Sudoku</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Page icon-->
+        <link rel="shortcut icon" href="./assets/images/Firma1.png" type="image/x-icon">
+    
+        <!-- Link to CSS -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <!-- Initial configuration menu-->
+            <div id="menu" class="menu">
+                <h1>Bienvenido al Sudoku</h1>
+
+                <!-- Configuration form -->
+                <form>
+                    <!-- Username selector -->
+                    <label for="nombre">Escribe tu nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <!-- Difficulty selector -->
+                    <label for="dificultad">Seleccione una dificultad:</label>
+                    <select id="dificultad" name="dificultad">
+                        <!-- El value de las opciones representa las celdas que quedan vacias para rellenar
+                         durante el juego, habiendo en total 81 celdas -->
+                        <option value="10">Muy fácil</option>
+                        <option value="25">Fácil</option>
+                        <option value="40">Intermedio</option>
+                        <option value="50">Difícil</option>
+                        <option value="60">Muy difícil</option>
+                        <option value="1">Prueba de funcionamiento</option>
+                    </select>
+                    <!-- Start game button -->
+                    <button type="button" id="btn_inicio">Comenzar Juego</button>
+                </form>
+            </div>
+            
+            <!-- Game container -->
+            <div id="sudoku__container" class="sudoku__container">
+                <!-- Game Nav -->
+                <nav class="sudoku__nav">
+                    <!-- Este span se llena desde el JS -->
+                    <span id="info_juego"></span>
+                    <button id="btn_reiniciar">Reiniciar Juego</button>
+                    <span id="minutes2">00</span>:<span id="seconds2">00</span>:<span id="milliseconds2">00</span>
+                </nav>
+                
+                <!-- Sudoku game table -->
+                <table id="sudoku__tabla" class="sudoku__tabla">
+                    <!-- Aquí se genera la tabla del juego -->
+                </table>
+                <!--Finish game button -->
+                <button id="btn_resolver" class="btn_resolver">Comprobar solución</button>
+                <!-- Possible messages when clicking on the button -->
+                <p id="error__incompleto" class="error__incompleto">Debes rellenar toda la tabla para poder pasarte el juego.</p>
+                <p id="error__mal" class="error__mal">Tienes casillas incorrectas.</p>
+            </div>
+
+            <!-- Result after finishing the game -->
+            <div id="resultado__juego" class="resultado__juego">
+                ¡Felicidades, <span class="nombre_jugador" id="nombre_jugador"></span>! Has completado el Sudoku con <span class="dificultad_final" id="dificultad_final"></span> celdas libres iniciales
+                <p>Tu tiempo fue: <span id="minutes3"></span>:<span id="seconds3"></span>:<span id="milliseconds3"></span></span></p>
+                <p><button id="btn_volverJuego">Volver a jugar</button></p>
+            </div>
+            
+        </div>
+
+        <!-- JS link -->
+        <script src="./js/script.js"></script>
+    </body>
+
+</html>

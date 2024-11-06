@@ -1,0 +1,29 @@
+La página se basa en el juego clásico de Sudoku, en esta podemos encontrar la siguientes partes:
+
+- Menú de configuración:
+ El menú consta de un espacio para la inserción del nombre del jugador, un selector de dificultad,
+ incluyendo un total de 5 dificultades y una de prueba, donde la dificultad varía el número total
+ de celdas a rellenar por el jugador, y finalmente tiene un botón para iniciar el juego. 
+
+- Juego Sudoku:
+ El juego se inicia generando una tabla con valores aleatorios entre el 1 y el 9, siempre siguiendo
+ las normas del juego, donde no pueden repetirse valores en la misma fila, columna y cuadro (los
+ cuadros son un 3x3 de celdas), según la dificultad habrá más espacios vacíos sin números o menos,
+ en estos son donde el jugador debe ingresar mediante el teclado números del 1 al 9 para completar
+ la tabla, si ingresa valores erróneos se le indicará.
+
+ Una vez la tabla se completa con números correctos se puede pulsar el botón de "Comprobar solución"
+ para pasar a los resultados de la partida, si se pulsa el botón antes de tiempo saltará un mensaje
+ indicando el error en la tabla que no permite avanzar.
+
+ En el juego también hay un botón para reiniciar el juego, que simplemente reiniciará la página y se
+ muestra la información del nombre de usuario y las celdas libres iniciales.
+
+- Pantalla de resultados:
+ Esta es un simple mensaje de felicidades donde se muestra la información del jugador y el tiempo
+ tardado en completar el juego, además se incluye un botón para volver a jugar.
+
+
+Recomendaciones:
+
+- Se recomienda usar la dificultad de "Prueba de funcionamiento" para probar el funcionamiento del juego.

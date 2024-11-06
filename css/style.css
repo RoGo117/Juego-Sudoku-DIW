@@ -1,0 +1,142 @@
+
+/*
+  Page made by Rodrigo Moreno Bielsa 2ºDAW
+  CSS Styles
+
+*/
+
+/* Main container */
+.container { 
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f9;
+}
+
+/* Configuration menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 710px;
+  width: 400px;
+  background-color: #f0f0f0;
+}
+
+.menu h1 {
+  margin-bottom: 20px;
+}
+
+.menu form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu label, .menu input, .menu select, .menu button {
+  margin: 5px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* Game interface */
+
+.sudoku__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display:none;
+}
+
+.sudoku__nav {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 1px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Sudoku table style */
+
+.sudoku__tabla {
+  /* Para que le borde se sobreponga al del alrededor*/
+  border-collapse: collapse;
+  width: 450px;
+  height: 450px;
+}
+
+.sudoku__tabla td {
+  border: 1px solid #333;
+  background-color: #fff;
+  text-align: center;
+  font-size: large;
+  /* Para que cada celda ocupe un noveno del ancho y alto */
+  width: 11.11%;
+  height: 11.11%;
+}
+
+/* Error cells*/
+.sudoku_cell.error {
+  background-color: #f8d7da;
+  color: #c11324;
+}
+
+/* Default porDefecto cells*/
+.sudoku_cell.porDefecto {
+  background-color: #e0e0e0;
+  color: #495057;
+  font-weight: bold;
+}
+
+/* If game errors */
+.error__incompleto, .error__mal  {
+  display: none;
+  color: red;
+  font-size: large;
+  font-weight: bold;
+}
+
+/* End game button */
+.btn_resolver {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Final interface */
+
+.resultado__juego{
+  display: none;
+
+  color: rgb(0, 0, 0);
+  font-size: bold;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 35%;
+  width: 90%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.nombre_jugador .dificultad_final .tiempo_final{
+  font-weight: bolder;
+}
+
+/* Default button style */
+
+button {
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
